@@ -7,6 +7,9 @@ import android.view.KeyCharacterMap
 import android.view.View
 import com.aslua.Document
 
+/**
+ * 文本编辑器行号显示，与文本滚动同步
+ */
 abstract class FreeScrollingTextAbstract : View, Document.TextFieldMetrics {
     override fun onCheckIsTextEditor(): Boolean {
         return true

@@ -67,6 +67,14 @@ fun Greeting() {
                 IconButton(onClick = { codeEditor?.redo() }) {
                     Text("重做")
                 }
+
+
+                IconButton(onClick = { codeEditor?.format() }) {
+                    Text("格式")
+                }
+
+
+
             }
         )
         HorizontalDivider(
