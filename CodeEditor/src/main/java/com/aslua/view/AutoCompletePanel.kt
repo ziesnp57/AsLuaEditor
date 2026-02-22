@@ -126,9 +126,7 @@ class AutoCompletePanel(textField: FreeScrollingTextField) {
         horizontal = minOf(horizontal, (_textField.get()!!.width / 2)) // 限制最大值
         if (_horizontal != horizontal) {
             _horizontal = horizontal
-            _autoCompletePanel?.let { panel ->
-                panel.horizontalOffset = horizontal
-            }
+            _autoCompletePanel?.horizontalOffset = horizontal
         }
     }
 
@@ -294,7 +292,7 @@ class AutoCompletePanel(textField: FreeScrollingTextField) {
                 override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                     if (results != null && results.count > 0 && !_abort.isSet()) {
                         // 有过滤结果，显示自动完成列表
-                        this@MyAdapter.clear() // 清空旧列表
+                        clear() // 清空旧列表
                         val values = results.values
                         if (values is ArrayList<*>) {
                             @Suppress("UNCHECKED_CAST")
