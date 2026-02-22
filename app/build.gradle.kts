@@ -29,17 +29,13 @@ android {
                 "proguard-rules.pro"
             )
         }
-        debug {
-            isMinifyEnabled = true     // 启用代码混淆
-            isShrinkResources = true   // 启用资源优化
-            renderscriptOptimLevel = 3 // 编译优化等级
-            isJniDebuggable = false    // 不调试 JNI
-            isDebuggable = false       // 调试版本
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
+//        debug {
+//            isMinifyEnabled = true     // 启用代码混淆
+//            isShrinkResources = true   // 启用资源优化
+//            renderscriptOptimLevel = 3 // 编译优化等级
+//            isJniDebuggable = false    // 不调试 JNI
+//            isDebuggable = false       // 调试版本
+//        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21

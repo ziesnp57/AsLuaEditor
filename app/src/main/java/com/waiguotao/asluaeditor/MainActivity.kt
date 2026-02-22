@@ -12,13 +12,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
@@ -66,11 +62,10 @@ fun Greeting() {
             }, // 显示项目名称
             actions = {
                 IconButton(onClick = { codeEditor?.undo() }) {
-                    Icon(Icons.Filled.ArrowBack, contentDescription = "撤销")
+                    Text("撤销")
                 }
                 IconButton(onClick = { codeEditor?.redo() }) {
-
-                    Icon(Icons.Filled.ArrowForward, contentDescription = "重做")
+                    Text("重做")
                 }
             }
         )
