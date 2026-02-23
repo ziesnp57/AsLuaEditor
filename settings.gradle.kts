@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+//        maven("https://central.sonatype.com/repository/maven-snapshots")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -24,5 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AsLuaEditor"
 include(":app")
-include(":CodeEditor")
  
